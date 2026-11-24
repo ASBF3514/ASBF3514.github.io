@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator Rams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="stage">
+  <section class="calc" aria-label="Kalkulator">
+    <header class="top">
+      <button class="chip" id="themeBtn" aria-label="Ganti tema">Tema</button>
+      <button class="chip" id="histBtn" aria-expanded="false" aria-controls="history">Riwayat</button>
+    </header>
+
+    <div class="screen" aria-live="polite">
+      <div class="preview" id="preview"></div>
+      <div class="main" id="main">0</div>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="k fn" data-k="AC">AC</button>
+      <button class="k fn" data-k="DEL" aria-label="Hapus satu">⌫</button>
+      <button class="k fn" data-k="%">%</button>
+      <button class="k op" data-k="÷">÷</button>
+
+      <button class="k" data-k="7">7</button>
+      <button class="k" data-k="8">8</button>
+      <button class="k" data-k="9">9</button>
+      <button class="k op" data-k="×">×</button>
+
+      <button class="k" data-k="4">4</button>
+      <button class="k" data-k="5">5</button>
+      <button class="k" data-k="6">6</button>
+      <button class="k op" data-k="-">−</button>
+
+      <button class="k" data-k="1">1</button>
+      <button class="k" data-k="2">2</button>
+      <button class="k" data-k="3">3</button>
+      <button class="k op" data-k="+">+</button>
+
+      <button class="k" data-k="±">±</button>
+      <button class="k" data-k="0">0</button>
+      <button class="k" data-k=".">,</button>
+      <button class="k eq" data-k="=">=</button>
+    </div>
+
+    <aside class="history" id="history" hidden>
+      <div class="hhead"><span>Riwayat</span><button class="chip" id="clearHist">Hapus semua</button></div>
+      <ul id="hlist"></ul>
+    </aside>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
